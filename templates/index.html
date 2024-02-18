@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>File Upload and Vector Generation</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e6e6e6; /* Light gray background */
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #336699; /* Dark blue heading */
+        }
+
+        form {
+            max-width: 400px;
+            margin: auto;
+            background-color: #ffffff; /* White form background */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h4 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #336699; /* Dark blue subheading */
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #336699; /* Dark blue button background */
+            color: #fff; /* White button text */
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #004080; /* Darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Vector Generate</h1>
+     
+    <form method="post" enctype="multipart/form-data">
+        <h4>Upload your file here</h4>
+        <input type="file" name="file" accept=".csv,.pdf" multiple required>
+        
+        <h4>Select embedding</h4>
+        <select name="model_name" required>
+            <option value="" disabled selected>Select</option>
+            <option value="sentence-transformers/all-MiniLM-L12-v2">sentence-transformers/all-MiniLM-L12-v2</option>
+            <option value="sentence-transformers/all-MiniLM-L6-v2">sentence-transformers/all-MiniLM-L6-v2</option>
+            <option value="aditeyabaral/sentencetransformer-bert-base-cased">aditeyabaral/sentencetransformer-bert-base-cased</option>
+            <option value="WhereIsAI/UAE-Large-V1">WhereIsAI/UAE-Large-V1</option>
+            <option value="bert-large-uncased">bert-large-uncased</option>
+            <option value="sembeddings/model_gpt_trained">sembeddings/model_gpt_trained</option>
+            <option value="BAAI/bge-large-en-v1.5">BAAI/bge-large-en-v1.5</option>
+        </select>
+        
+        <h4>Select chunk size</h4>
+        <select name="chunk_size" required>
+            <option value="" disabled selected>Select</option>
+            <option value=100>100-word chunks</option>
+            <option value=256>256-word chunks</option>
+            <option value=512>512-word chunks</option>
+            <option value=1000>1000-word chunks</option>
+        </select>
+
+        <br><br>
+        <button type="submit">Generate Vectors</button>
+    </form>
+</body>
+</html>
