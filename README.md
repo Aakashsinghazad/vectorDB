@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Microservice for Generating a Vector Database
 
 This microservice allows users to effortlessly create a **Vector Database** by following a series of steps. By leveraging advanced text processing and embedding models, users can build a powerful database enriched with metadata and optimized for efficient querying.
@@ -19,3 +20,6 @@ This microservice allows users to effortlessly create a **Vector Database** by f
 ### Step 5: Choose Vector Database (Index)
 - Select a vector database for indexing purposes. Options include popular solutions like **FAISS**, **Pinecone**, etc. This step ensures that your Vector Database is efficiently organized for seamless retrieval of relevant information.
 
+=======
+# vectorDB
+>>>>>>> bdf52b7b547cfe59bf7ef97be578bc1bd7609958
